@@ -1,0 +1,10 @@
+{
+    "eng":{
+        "show":"Thank you",
+        "RTL":false
+    },
+    "jap":{
+        "show":"ありがとうございました",
+        "RTL":true
+    }
+}
