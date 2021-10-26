@@ -1,26 +1,27 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
-import EvaLocalisation, { setLanguage, getLanguage } from "./EvaLocalisation";
+import EvaLocalisation, { setLanguage, getLanguage } from "./Localization";
 import AllPath from "./constants/AllPath";
 
 export default function App() {
-  // const { lang,changeLang} = getLanguageContext()
-
   const [lang, setLang] = useState(getLanguage());
   useEffect(() => {
     async function getData() {
       const t = await getLanguage();
+      console.log("bhatt", t);
       setLang(t);
     }
     getData();
   }, []);
+
   const pressHandler = async (vaani) => {
-    setLanguage(vaani);
+    await setLanguage(vaani);
     const t = await getLanguage();
     console.log("rohit", await "description".getLocalisedString());
     setLang(t);
   };
+
   return (
     <View style={styles.container}>
       {/* <Sasta /> */}
@@ -38,9 +39,6 @@ export default function App() {
       <Text>{lang.description}</Text>
       <StatusBar style="auto" />
     </View>
-    // <EvaLocalisation>
-    //   <Broccoli />
-    // </EvaLocalisation>
   );
 }
 
