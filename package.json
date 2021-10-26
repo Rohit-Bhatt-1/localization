@@ -8,12 +8,6 @@
     "eject": "expo eject",
     "test": "jest"
   },
-  "jest": {
-    "preset": "react-native",
-    "setupFiles": [
-      "./Localization.test.ts"
-    ]
-  },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.9",
     "@react-native-community/masked-view": "0.1.10",
@@ -31,13 +25,14 @@
     "react-native-reanimated": "~2.2.0",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@types/jest": "^27.0.2",
-    "@types/react": "^17.0.30",
-    "@types/react-native": "^0.65.8",
+    "@types/react": "^17.0.33",
+    "@types/react-native": "^0.65.13",
     "@types/react-test-renderer": "^17.0.1",
     "typescript": "^4.4.4"
   },
