@@ -13,12 +13,12 @@ export const getLanguage = async () => {
     try{
         let AllPath = require(Path)
         const v = await AsyncStorage.getItem('language');
-        console.log("for test v :- ",v)
+        console.log("for test v :- ",AllPath)
         if(v===null){
-            return AllPath.Paths['en']
+            return AllPath.default.Paths['en']
         }
         console.log("checking---",AllPath)
-        return AllPath.Paths[v];
+        return AllPath.default.Paths[v];
     }catch(err){
         console.log(err)
     }

@@ -11,15 +11,15 @@ describe("Check Localization",() =>{
         jest.unmock('./constants/AllPath');
     })
     
-    xit("should check getting of language when nothing is initialized",async () => {
+    it("should check getting of language when nothing is initialized",async () => {
         await getLanguage()
         expect(AsyncStorage.getItem).toBeCalledWith('language');
     });
-    xit("should check setting of language",async () => {
+    it("should check setting of language",async () => {
             await setLanguage("hin");
             expect(AsyncStorage.setItem).toBeCalledWith('language','hin');
     });
-    xit("should check getting of language",async () => {
+    it("should check getting of language",async () => {
         await setLanguage("hin");
         await getLanguage()
         expect(AsyncStorage.getItem).toBeCalledWith('language');
@@ -27,10 +27,12 @@ describe("Check Localization",() =>{
     
     it("should return value from a valid key",async () => {
         jest.mock("./constants/AllPath",()=>({
-            Paths : {
+            default:{
+                Paths : {
                 "en":{
                     "description":"Aeyyo Kozou!!"
                 }
+            }
             }
         }));
         console.log(AsyncStorage)
@@ -38,6 +40,12 @@ describe("Check Localization",() =>{
         console.log("stack--",await getLanguage())
         console.log(await "description".getLocalisedString())
     }); 
+    it("should check error",async () => {
+        await setLanguage("hinata");
+        await getLanguage()
+        expect(AsyncStorage.getItem).rejects
+    });
     }
+    
     
 );

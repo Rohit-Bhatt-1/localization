@@ -16,9 +16,9 @@ export default  {
               getItem: (key) => {
                 return new Promise((resolve,reject) => {
                     console.log("aa gya get.. has",mockhero)
-                  return key==='language'
+                  return mockhero.get(key)==='en'
                     ? resolve(mockhero.get(key))
-                    : reject("arrghhh");
+                    : reject(new Error("aargghh"));
                 });
               },
           }

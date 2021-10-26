@@ -6,11 +6,13 @@ import AllPath from "./constants/AllPath";
 
 export default function App() {
   const [lang, setLang] = useState(getLanguage());
+  const [check, setCheck] = useState(false)
   useEffect(() => {
     async function getData() {
       const t = await getLanguage();
       console.log("bhatt", t);
       setLang(t);
+      setCheck(true)
     }
     getData();
   }, []);
@@ -21,7 +23,13 @@ export default function App() {
     console.log("rohit", await "description".getLocalisedString());
     setLang(t);
   };
-
+  if(!check)return(
+    <View>
+      <Text>
+        Loading
+      </Text>
+    </View>
+  )
   return (
     <View style={styles.container}>
       {/* <Sasta /> */}
