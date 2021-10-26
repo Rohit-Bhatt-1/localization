@@ -11,7 +11,7 @@
   "jest": {
     "preset": "react-native",
     "setupFiles": [
-      "./EvaLocalization.test.ts"
+      "./Localization.test.ts"
     ]
   },
   "dependencies": {
