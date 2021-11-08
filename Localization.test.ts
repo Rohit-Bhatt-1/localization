@@ -11,18 +11,17 @@ describe("Check Localization",() =>{
         jest.unmock('./constants/AllPath');
     })
     
-    it("should check getting of language when nothing is initialized",async () => {
-        await getLanguage()
-        expect(AsyncStorage.getItem).toBeCalledWith('language');
-    });
+    
     it("should check setting of language",async () => {
-            await setLanguage("hin");
-            expect(AsyncStorage.setItem).toBeCalledWith('language','hin');
+        const spy = jest.spyOn(AsyncStorage, 'setItem');
+        await setLanguage("hin");
+        expect(spy).toBeCalledWith('language','hin');
     });
     it("should check getting of language",async () => {
         await setLanguage("hin");
-        await getLanguage()
-        expect(AsyncStorage.getItem).toBeCalledWith('language');
+        const spy = jest.spyOn(AsyncStorage, 'getItem');
+        await getLanguage();
+        expect(spy).toBeCalledWith('language');
     });
     
     it("should return value from a valid key",async () => {

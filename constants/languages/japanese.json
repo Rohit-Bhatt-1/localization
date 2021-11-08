@@ -1,4 +1,7 @@
 {
     "gyaan":"Japanese",
-    "description":"This is Japanese"
+    "description":"This is Japanese",
+    "RTL":true,
+    "text":"Japanese text",
+    "placeholder" : "Japanese Placeholder for text box"
 }

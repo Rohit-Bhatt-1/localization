@@ -1,27 +1,65 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform, NativeModules, I18nManager } from 'react-native';
+import * as Updates from 'expo-updates';
 
-const Path = "./constants/AllPath"
-// const AllPath = require("")
+const Path = "./constants/AllPath.js";
 
+let direction = {
+    start : "left",
+    end : "right"
+};
+
+export const isRTL = async() => {
+    return ( "RTL".getLocalisedString());
+}
+
+export const myDirection = () => {
+    if(I18nManager.isRTL)
+    {
+        return {start:"right",end:"left"}
+    }
+    return {start:"left",end:"right"}
+}
 
 export const setLanguage = async(lName:string) => {
+    
     await AsyncStorage.setItem('language',lName);
+
+    if(await isRTL()){
+            I18nManager.forceRTL(true);
+            direction.start = "right";
+            direction.end = "left;"
+        }
+    else{
+            I18nManager.forceRTL(false);
+            direction.start = "left";
+            direction.end = "right;"
+        }
+        
+    Updates.reloadAsync();
 }
 
 export const getLanguage = async () => {
     
     try{
-        let AllPath = require(Path)
+        const AllPath = require(Path);
         const v = await AsyncStorage.getItem('language');
-        console.log("for test v :- ",AllPath)
+        
         if(v===null){
+            await setLanguage('en');
             return AllPath.default.Paths['en']
         }
-        console.log("checking---",AllPath)
         return AllPath.default.Paths[v];
     }catch(err){
         console.log(err)
     }
+}
+
+export const getUserDefaultLanguage = () => 
+{
+    return Platform.OS === 'ios'
+    ? NativeModules.SettingsManager.settings.AppleLocale
+    : NativeModules.I18nManager.localeIdentifier
 }
 
 declare global {
@@ -32,14 +70,13 @@ declare global {
 
 String.prototype.getLocalisedString = async function(this:string):Promise<string>
 {
-    try {
+    try 
+    {
         const langObj = await getLanguage();
-        console.log("lanobj--",langObj)
         let key: string = this;
         return langObj[key];
     } catch (err) {
         console.log("error: ",err);
-        return "error while implementing getLanguage()"
+        return "error while implementing getLanguage";
     }
-   
 } 

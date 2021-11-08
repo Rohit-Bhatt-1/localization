@@ -1,18 +1,19 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
-import EvaLocalisation, { setLanguage, getLanguage } from "./Localization";
-import AllPath from "./constants/AllPath";
+
+import { StyleSheet, Text, View, Button, Alert } from "react-native";
+import MyImage from "./tags/Image";
+import MyText from "./tags/Text";
+import MyTextInput from "./tags/TextInput";
+import { setLanguage, getLanguage } from "./Localization";
 
 export default function App() {
   const [lang, setLang] = useState(getLanguage());
-  const [check, setCheck] = useState(false)
+  const [check, setCheck] = useState(false);
   useEffect(() => {
     async function getData() {
       const t = await getLanguage();
-      console.log("bhatt", t);
       setLang(t);
-      setCheck(true)
+      setCheck(true);
     }
     getData();
   }, []);
@@ -20,41 +21,72 @@ export default function App() {
   const pressHandler = async (vaani) => {
     await setLanguage(vaani);
     const t = await getLanguage();
-    console.log("rohit", await "description".getLocalisedString());
     setLang(t);
   };
-  if(!check)return(
-    <View>
-      <Text>
-        Loading
-      </Text>
-    </View>
-  )
+  if (!check) {
+    return (
+      <View>
+        <Text>Ruko zara, Sabr rakho</Text>
+      </View>
+    );
+  }
+
+  const aler = () =>
+    Alert.alert("Alert Title", "My Alert Msg", [
+      {
+        text: "Cancel",
+        onPress: () => console.log("Cancel Pressed"),
+        style: "cancel",
+      },
+      { text: "OK", onPress: () => console.log("OK Pressed") },
+    ]);
+
   return (
-    <View style={styles.container}>
-      {/* <Sasta /> */}
-      <Text>{lang.gyaan} jk</Text>
-      <Button
-        onPress={() => pressHandler("en")}
-        title="English"
-        color="#841584"
-      />
-      <Button
-        onPress={() => pressHandler("jpn")}
-        title="Japanese"
-        color="#841342"
-      />
-      <Text>{lang.description}</Text>
-      <StatusBar style="auto" />
+    <View style={styles.out}>
+      <View>
+        <MyText>This is inside MyText!!</MyText>
+        <MyText onPress={aler}>{lang.text}</MyText>
+        <MyTextInput placeholder={lang.placeholder} style={styles.inp} />
+        <MyImage
+          source={require("./constants/Assets/RTL/finger-point.png")}
+          style={styles.fingerPoint}
+        />
+      </View>
+      <View style={styles.in}>
+        <MyText>{lang.gyaan} jk</MyText>
+        <Button
+          onPress={() => pressHandler("en")}
+          title="English"
+          color="#841584"
+        />
+        <Button
+          onPress={() => pressHandler("jpn")}
+          title="Japanese"
+          color="#841342"
+        />
+        <MyText>{lang.description}</MyText>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  out: {
+    margin: 20,
+    flex: 1,
+  },
+  in: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  inp: {
+    borderTopWidth: 2,
+    borderLeftWidth: 1,
+  },
+  fingerPoint: {
+    width: 50,
+    height: 50,
   },
 });
