@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1636526613593" clover="3.2.0">
-  <project timestamp="1636526613593" name="All files">
-    <metrics statements="69" coveredstatements="36" conditionals="16" coveredconditionals="5" methods="19" coveredmethods="6" elements="104" coveredelements="47" complexity="0" loc="69" ncloc="69" packages="3" files="8" classes="8"/>
+<coverage generated="1636718074060" clover="3.2.0">
+  <project timestamp="1636718074060" name="All files">
+    <metrics statements="85" coveredstatements="51" conditionals="18" coveredconditionals="8" methods="24" coveredmethods="11" elements="127" coveredelements="70" complexity="0" loc="85" ncloc="85" packages="4" files="13" classes="13"/>
     <package name="localization">
-      <metrics statements="62" coveredstatements="35" conditionals="12" coveredconditionals="5" methods="16" coveredmethods="6"/>
-      <file name="App.js" path="C:\Users\akhkushw\Documents\ReactNative\expoL\localization\App.js">
+      <metrics statements="72" coveredstatements="44" conditionals="14" coveredconditionals="7" methods="18" coveredmethods="8"/>
+      <file name="App.js" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\App.js">
         <metrics statements="21" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -28,80 +28,114 @@
         <line num="63" count="0" type="stmt"/>
         <line num="73" count="0" type="stmt"/>
       </file>
-      <file name="Localization.tsx" path="C:\Users\akhkushw\Documents\ReactNative\expoL\localization\Localization.tsx">
+      <file name="Localization.tsx" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\Localization.tsx">
         <metrics statements="38" coveredstatements="33" conditionals="10" coveredconditionals="5" methods="6" coveredmethods="5"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="4" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="27" count="4" type="stmt"/>
-        <line num="29" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="28" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="3" type="stmt"/>
         <line num="30" count="3" type="stmt"/>
         <line num="31" count="3" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="42" count="4" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="59" count="8" type="stmt"/>
-        <line num="60" count="8" type="stmt"/>
-        <line num="61" count="8" type="stmt"/>
-        <line num="62" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="63" count="0" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="46" count="8" type="stmt"/>
+        <line num="47" count="8" type="stmt"/>
+        <line num="48" count="8" type="stmt"/>
+        <line num="49" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="59" count="5" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
         <line num="64" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="70" count="3" type="stmt"/>
-        <line num="72" count="5" type="stmt"/>
-        <line num="76" count="1" type="stmt"/>
-        <line num="78" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="89" count="1" type="stmt"/>
-        <line num="91" count="5" type="stmt"/>
-        <line num="93" count="5" type="stmt"/>
-        <line num="94" count="5" type="stmt"/>
-        <line num="95" count="5" type="stmt"/>
-        <line num="97" count="3" type="stmt"/>
-        <line num="98" count="3" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="5" type="stmt"/>
+        <line num="77" count="5" type="stmt"/>
+        <line num="78" count="5" type="stmt"/>
+        <line num="79" count="5" type="stmt"/>
+        <line num="81" count="3" type="stmt"/>
+        <line num="82" count="3" type="stmt"/>
       </file>
-      <file name="Restart.tsx" path="C:\Users\akhkushw\Documents\ReactNative\expoL\localization\Restart.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
+      <file name="Restart.ts" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\Restart.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
-      <file name="jest.config.js" path="C:\Users\akhkushw\Documents\ReactNative\expoL\localization\jest.config.js">
+      <file name="expoRestart.ts" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\expoRestart.ts">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="jest.config.js" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\jest.config.js">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
+      </file>
+      <file name="vanillaRestart.ts" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\vanillaRestart.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
       </file>
     </package>
     <package name="localization.constants">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="AllPath.js" path="C:\Users\akhkushw\Documents\ReactNative\expoL\localization\constants\AllPath.js">
+      <file name="AllPath.js" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\constants\AllPath.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="3" type="stmt"/>
       </file>
     </package>
     <package name="localization.tags">
-      <metrics statements="6" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="Image.tsx" path="C:\Users\akhkushw\Documents\ReactNative\expoL\localization\tags\Image.tsx">
+      <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="Image.tsx" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\tags\Image.tsx">
         <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
       </file>
-      <file name="Text.tsx" path="C:\Users\akhkushw\Documents\ReactNative\expoL\localization\tags\Text.tsx">
+      <file name="Text.tsx" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\tags\Text.tsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
       </file>
-      <file name="TextInput.tsx" path="C:\Users\akhkushw\Documents\ReactNative\expoL\localization\tags\TextInput.tsx">
-        <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="TextInput.tsx" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\tags\TextInput.tsx">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="localization.tags.tags">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="EvaImage.tsx" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\tags\tags\EvaImage.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="EvaText.tsx" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\tags\tags\EvaText.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="EvaTextInput.tsx" path="C:\Users\rohbhatt5\Desktop\React-Native\localization\tags\tags\EvaTextInput.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
       </file>
     </package>
   </project>

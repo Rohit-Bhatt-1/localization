@@ -1,8 +1,8 @@
 import React from 'react'
 import { TextInput } from 'react-native'
-import { myDirection } from '../Localization';
+import { myDirection } from '../../Localization';
 
-const MyTextInput = (props: any) => {
+const EvaTextInput = (props: any) => {
 
     return (
         <TextInput  {...props} style={{ ...props.style, textAlign: myDirection().start }} >
@@ -11,4 +11,4 @@ const MyTextInput = (props: any) => {
     )
 }
 
-export default MyTextInput;
+export default EvaTextInput;
